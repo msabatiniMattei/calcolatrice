@@ -20,12 +20,15 @@ public class MainActivity extends AppCompatActivity {
         EditText num2 = (EditText) findViewById((R.id.editTextN2));
         TextView res = (TextView) findViewById((R.id.textViewResult));
 
+        //test per github
         somma.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 int totale = 0;
-                totale = Integer.valueOf(num1.getText().toString()) + Integer.valueOf(num2.getText().toString());
-                res.setText(totale);
+                String strNum1 = num1.getText().toString();
+                String strNum2 = num2.getText().toString();
+                totale = Integer.parseInt(strNum1) + Integer.parseInt(strNum2);
+                res.setText(Integer.toString(totale));
             }
         });
     }
